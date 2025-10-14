@@ -99,7 +99,7 @@ body {
 
 .tagline.fade-out {
     opacity: 0;
-    transform: scale(0.9) translateY(-50px);
+    transform: scale(1) translateY(0);
 }
 
 /* Contact Text */
