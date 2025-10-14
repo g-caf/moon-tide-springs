@@ -94,12 +94,12 @@ body {
 
 .tagline.visible {
     opacity: 1;
-    transform: scale(1) translateY(30px);
+    transform: scale(1) translateY(0);
 }
 
 .tagline.fade-out {
     opacity: 0;
-    transform: scale(0.9) translateY(-20px);
+    transform: scale(0.9) translateY(-50px);
 }
 
 /* Contact Text */

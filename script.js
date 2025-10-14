@@ -1,6 +1,5 @@
-// Animation sequencing - three stages
+// Animation sequencing - two stages
 document.addEventListener('DOMContentLoaded', function() {
-    const brandName = document.getElementById('brand-name');
     const tagline = document.getElementById('tagline');
     const contactText = document.getElementById('contact-text');
     const video = document.getElementById('background-video');
@@ -10,26 +9,20 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Video autoplay prevented:', error);
     });
 
-    // Stage 1: Show "Moon Tide Springs" (takes 2 seconds to animate in)
-    setTimeout(function() {
-        brandName.classList.add('visible');
-    }, 800);
-
-    // Stage 2: Show tagline below (after brand name is visible)
+    // Stage 1: Show tagline "100% Pure Water, From the Heart of Maine"
     setTimeout(function() {
         tagline.classList.add('visible');
-    }, 3000);
+    }, 800);
 
-    // Stage 3: Fade out both brand name and tagline (after 3 seconds together)
+    // Stage 2: Fade out tagline (after 3 seconds on screen)
     setTimeout(function() {
-        brandName.classList.add('fade-out');
         tagline.classList.add('fade-out');
-    }, 6000);
+    }, 3800);
 
-    // Stage 4: Show "Inquire Within" after fade out
+    // Stage 3: Show "Inquire Within" after fade out
     setTimeout(function() {
         contactText.classList.add('visible');
-    }, 8000);
+    }, 5800);
 });
 
 // Handle video loading errors gracefully
