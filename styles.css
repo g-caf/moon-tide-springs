@@ -66,6 +66,7 @@ body {
     opacity: 0;
     transform: scale(0.5) translateY(100px);
     transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: absolute;
 }
 
 .card.visible {
@@ -73,9 +74,13 @@ body {
     transform: scale(1) translateY(0);
 }
 
+.card.fade-out {
+    opacity: 0;
+    transform: scale(0.8) translateY(-50px);
+}
+
 /* Brand Card */
 .brand-card {
-    margin-bottom: 40px;
     max-width: 700px;
 }
 

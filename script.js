@@ -14,10 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
         brandCard.classList.add('visible');
     }, 800);
 
-    // Animate contact card after brand card
+    // Fade out brand card before showing contact card
+    setTimeout(function() {
+        brandCard.classList.add('fade-out');
+    }, 3000);
+
+    // Animate contact card after brand card fades
     setTimeout(function() {
         contactCard.classList.add('visible');
-    }, 2200);
+    }, 4200);
 });
 
 // Handle video loading errors gracefully
