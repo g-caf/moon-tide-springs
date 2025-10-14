@@ -1,0 +1,185 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow-x: hidden;
+    background: #000;
+    color: #fff;
+}
+
+/* Video Background */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-fallback {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c2e 0%, #2d5a3d 100%);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+/* Content Container */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+/* Card Base Styles */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 60px 80px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.5) translateY(100px);
+    transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Brand Card */
+.brand-card {
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.brand-name {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: #1a4d2e;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: #4a7c59;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+}
+
+/* Contact Card */
+.contact-card {
+    padding: 40px 60px;
+    max-width: 500px;
+    animation-delay: 0.8s;
+}
+
+.contact-button {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    background: linear-gradient(135deg, #2d5a3d 0%, #1a4d2e 100%);
+    padding: 20px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(29, 78, 46, 0.3);
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(29, 78, 46, 0.5);
+    background: linear-gradient(135deg, #1a4d2e 0%, #2d5a3d 100%);
+}
+
+.contact-button:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 40px 30px;
+    }
+
+    .contact-card {
+        padding: 30px 25px;
+    }
+
+    .contact-button {
+        font-size: 1.2rem;
+        padding: 18px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-name {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .contact-button {
+        font-size: 1.1rem;
+        padding: 15px 35px;
+    }
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 0.5s ease-in;
+}
