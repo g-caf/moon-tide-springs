@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
         tagline.classList.add('visible');
     }, 800);
 
-    // Stage 2: Fade out tagline (after 3 seconds on screen)
+    // Stage 2: Fade out tagline (after 4.2 seconds on screen - 40% longer)
     setTimeout(function() {
         tagline.classList.add('fade-out');
-    }, 3800);
+    }, 5000);
 
     // Stage 3: Show "Inquire Within" after fade out
     setTimeout(function() {
         contactText.classList.add('visible');
-    }, 5800);
+    }, 7000);
 });
 
 // Handle video loading errors gracefully
