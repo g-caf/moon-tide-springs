@@ -56,130 +56,111 @@ body {
     position: relative;
 }
 
-.brand-name {
-    font-size: 3.5rem;
-    font-weight: 500;
-    letter-spacing: -0.03em;
+/* Info Panel */
+.info-panel {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 50px 60px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.company-name {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     color: #ffffff;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transform: scale(0.5) translateY(100px);
-    transition: all 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: absolute;
-}
-
-.brand-name.visible {
-    opacity: 1;
-    transform: scale(1) translateY(-30px);
-}
-
-.brand-name.fade-out {
-    opacity: 0;
-    transform: scale(0.9) translateY(-80px);
+    margin: 0 0 24px 0;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .tagline {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: -0.01em;
-    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transform: scale(0.5) translateY(100px);
-    transition: all 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: absolute;
+    margin: 0 0 32px 0;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
-.tagline.visible {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+.location {
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin: 0 0 24px 0;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
-.tagline.fade-out {
-    opacity: 0;
-    transform: scale(1) translateY(0);
-    transition: opacity 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.contact-info {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Text */
-.contact-text {
-    opacity: 0;
-    transform: scale(1) translateY(0);
-    transition: opacity 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: absolute;
-    visibility: hidden;
-}
-
-.contact-text.visible {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    visibility: visible;
-}
-
-.contact-link {
-    display: inline-block;
-    font-size: 1.75rem;
-    color: #fff;
+.email-link {
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
     transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
-.contact-link:hover {
-    transform: translateY(-2px);
-    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+.email-link:hover {
     opacity: 0.8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .brand-name {
-        font-size: 2.5rem;
+    .info-panel {
+        padding: 40px 45px;
+    }
+
+    .company-name {
+        font-size: 2.25rem;
     }
 
     .tagline {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
-    .card {
-        padding: 30px 25px;
+    .location {
+        font-size: 1.1rem;
     }
 
-    .contact-card {
-        padding: 30px 25px;
-    }
-
-    .brand-name {
-        font-size: 2.5rem;
-    }
-
-    .contact-button {
-        font-size: 1.2rem;
-        padding: 18px 40px;
+    .contact-info {
+        font-size: 0.95rem;
     }
 }
 
 @media (max-width: 480px) {
-    .brand-name {
-        font-size: 1.8rem;
+    .info-panel {
+        padding: 30px 25px;
+    }
+
+    .company-name {
+        font-size: 1.75rem;
+        margin-bottom: 18px;
     }
 
     .tagline {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 24px;
     }
 
-    .card {
-        padding: 25px 20px;
-        border-radius: 12px;
+    .location {
+        font-size: 1rem;
+        margin-bottom: 18px;
     }
 
-    .contact-button {
-        font-size: 1rem;
-        padding: 14px 32px;
+    .contact-info {
+        font-size: 0.9rem;
     }
 }
 

@@ -1,7 +1,5 @@
-// Animation sequencing - two stages
+// Video playback handling
 document.addEventListener('DOMContentLoaded', function() {
-    const tagline = document.getElementById('tagline');
-    const contactText = document.getElementById('contact-text');
     const video = document.getElementById('background-video');
 
     // Try to play video, handle autoplay restrictions
@@ -20,21 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, { once: true });
         });
     }
-
-    // Stage 1: Show tagline "100% Pure Water, From the Heart of Maine"
-    setTimeout(function() {
-        tagline.classList.add('visible');
-    }, 800);
-
-    // Stage 2: Fade out tagline (after 6.2 seconds on screen)
-    setTimeout(function() {
-        tagline.classList.add('fade-out');
-    }, 7000);
-
-    // Stage 3: Show "Inquire Within" after tagline completely fades (6s fade + buffer)
-    setTimeout(function() {
-        contactText.classList.add('visible');
-    }, 13200);
 });
 
 // Handle video loading errors gracefully
