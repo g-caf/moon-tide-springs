@@ -209,3 +209,284 @@ body {
 body {
     animation: fadeIn 0.5s ease-in;
 }
+
+/* Content Sections */
+.content-sections {
+    position: relative;
+    z-index: 3;
+    background: #fff;
+}
+
+.content-section {
+    padding: 80px 20px;
+    background: #fff;
+    color: #1a1a1a;
+}
+
+.content-section.dark {
+    background: #f8f9fa;
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-inner.centered {
+    text-align: center;
+}
+
+/* Typography for Content Sections */
+.content-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.content-section h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d5a3d;
+    margin-bottom: 15px;
+}
+
+.content-section h4 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.content-section p.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #2d2d2d;
+    line-height: 1.7;
+}
+
+/* Section Content Layouts */
+.section-content {
+    margin-top: 40px;
+}
+
+.section-content.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+/* Service List */
+.service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.service-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #2d5a3d;
+    font-weight: 600;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, #2d5a3d 0%, #1e3c2e 100%);
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta-box h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #2d5a3d;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    border-color: #2d5a3d;
+    box-shadow: 0 6px 20px rgba(45, 90, 61, 0.1);
+    transform: translateY(-3px);
+}
+
+.benefit-card h3 {
+    margin-top: 0;
+}
+
+.benefit-card p {
+    margin-bottom: 0;
+}
+
+/* Contact Details */
+.contact-details {
+    margin: 40px 0;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-details p:last-child {
+    margin-bottom: 0;
+}
+
+.email-link-content {
+    color: #2d5a3d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.email-link-content:hover {
+    border-bottom: 2px solid #2d5a3d;
+}
+
+.final-cta {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 30px auto 0;
+    color: #2d2d2d;
+}
+
+/* Responsive Design for Content Sections */
+@media (max-width: 968px) {
+    .section-content.two-column {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        padding: 60px 20px;
+    }
+
+    .content-section h2 {
+        font-size: 2rem;
+    }
+
+    .content-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .content-section p {
+        font-size: 1rem;
+    }
+
+    .content-section p.lead {
+        font-size: 1.15rem;
+    }
+
+    .service-list li {
+        font-size: 1rem;
+    }
+
+    .contact-details {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-section {
+        padding: 50px 15px;
+    }
+
+    .content-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .content-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .benefit-card {
+        padding: 25px;
+    }
+
+    .cta-box {
+        padding: 25px;
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .contact-details p {
+        font-size: 1rem;
+    }
+}
